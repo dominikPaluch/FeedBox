@@ -1,0 +1,21 @@
+.content {
+    width: calc(100% - 70px);
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    float: left;
+    width: 100%;
+    padding: 2rem 3rem;
+    flex-grow: 1;
+    display: flex;
+    &__column {
+        height: 100%;
+    }
+}

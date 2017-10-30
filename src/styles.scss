@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/styles/_base.scss';
+@import './app/styles/_global.scss';
+@import './app/styles/_fonts.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,700,800,900&subset=latin-ext');
+$bg: #edeff5;
+$uh: 1700px;
+$hd: 1450px;
+$lg: 1100px;
+$md: 991px;
+$sm: 600px;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul>li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.minheight {
+  min-height: 1px;
+}
+
+@media screen and (max-width: $uh) {
+  html {
+    font-size: 9.5px;
+  }
+}
+
+@media screen and (max-width: $hd) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .text-center-xs {
+    text-align: center !important;
+  }
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+body {
+  background: $bg;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  /*text-transform: uppercase;*/
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #000;
+  padding-top: 6rem;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.list-width {
+  width: 84%;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+.content {
+  &-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #edeff5;
+    padding: 0.5rem 0px 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    &__user {
+      display: flex;
+      align-items: center;
+    }
+    &__body {
+      padding: 0.5rem 4rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
+  &-user {
+    &__avatar {
+      width: 2.4rem;
+      height: 2.4rem;
+      background-color: #f00;
+      border-radius: 50%;
+      font-size: 1rem;
+      line-height: 2.4rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 0.8rem 1.1rem 0.8rem 0.5rem;
+    }
+    &__name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      flex-grow: 1;
+    }
+    &__time {
+      font-size: 1.3rem;
+      font-weight: 100;
+      float: right;
+      padding-right: 1rem;
+    }
+  }
+}
