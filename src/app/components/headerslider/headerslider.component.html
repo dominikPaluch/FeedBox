@@ -1,4 +1,4 @@
-<div class="slider">
+<div class="slider" (mouseenter)="stopRoutine()" (mouseleave)="startRoutine()">
   <div *ngFor="let slide of slides" class="slider__item" 
   [class.slider__item--active]="slide.active"
   [style.backgroundImage]="'url('+ slide.img + ')'">

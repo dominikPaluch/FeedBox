@@ -8,6 +8,8 @@ import { Slide } from '../../model/slide';
 })
 export class HeadersliderComponent implements OnInit {
 
+  private activeSlide = 0;
+  private interval;
   slides: Slide[] = [];
 
   constructor() { }
@@ -15,8 +17,8 @@ export class HeadersliderComponent implements OnInit {
   ngOnInit() {
     const texts: string[] = ["EcoFood", "Zimowa promocja", "Jesienne boxy"];
     const titles: string[] = [
-      "Sprawdź naszą nową oferte, produktów ekologicznych", 
-      "Spróbuj naszych rozgrzewających zimowych zestawów obiadowych", 
+      "Sprawdź naszą nową oferte, produktów ekologicznych",
+      "Spróbuj naszych rozgrzewających zimowych zestawów obiadowych",
       "Znudzony jesienną monotonnią? Sprawdź nasze posiłki"
     ];
 
@@ -28,14 +30,53 @@ export class HeadersliderComponent implements OnInit {
 
       this.slides.push(slide);
     }
-  } 
+
+    this.startRoutine();
+  }
+
+  stopRoutine() {
+    console.log('a');
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
+
+  startRoutine() {
+    console.log('b');
+    this.slideRoutine();
+  }
+
+  private slideRoutine() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+    this.interval = setInterval(() => {
+      this.moveSliderForward();
+    }, 5000);
+  }
+
+  moveSliderForward() {
+    let newIndex = this.activeSlide;
+    if (this.activeSlide === this.slides.length - 1) {
+      newIndex = 0;
+    } else {
+      newIndex++;
+    }
+    this.setActive(this.slides[newIndex]);
+  }
 
   setActive(slide: Slide) {
+    this.startRoutine();
+    let index = 0;
     this.slides.forEach(s => {
-      s.active = false;
+      if (s === slide) {
+        s.active = true;
+        this.activeSlide = index;
+      } else {
+        s.active = false;
+      }
+      index++;
     })
-
-    slide.active = true;
 
   }
 
