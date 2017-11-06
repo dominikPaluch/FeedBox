@@ -1,8 +1,13 @@
 @import './app/styles/_base.scss';
 @import './app/styles/_global.scss';
 @import './app/styles/_fonts.scss';
+
+
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,700,800,900&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 $bg: #edeff5;
 $uh: 1700px;
 $hd: 1450px;
@@ -65,8 +70,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   color: #000;
-  padding-top: 6rem;
+  padding-top: 10rem;
 }
+// font-family: 'Pacifico', cursive;
 
 .ellipsis {
   white-space: nowrap;
