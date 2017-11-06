@@ -1,21 +1,51 @@
-.content {
-    width: calc(100% - 70px);
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+@import './app/styles/_variables.scss';
+@import './app/styles/_mixins.scss';
+
+a {
+    color: $black;
 }
 
-.wrapper {
-    float: left;
-    width: 100%;
-    padding: 2rem 3rem;
-    flex-grow: 1;
+.menu {
     display: flex;
-    &__column {
-        height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: -1px 0px 8px rgba($black, 0.5);
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        font-family: 'Pacifico', cursive;
+        color: $black;
+        span {
+            &:first-child {
+                color: $green;
+            }
+        }
+    }
+    &__links {
+
+    }
+
+    &-item {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        padding: 4rem 2rem;
+        display: block;
+        float: left;
+        color: $black;
+        font-weight: 500;
+        @include transition(color 0.5s ease);
+        &:hover {
+            color: $green;
+        }
+    }
+    &-item--active {
+        color: $green;
     }
 }
