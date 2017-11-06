@@ -1,0 +1,16 @@
+<div class="slider">
+  <div *ngFor="let slide of slides" class="slider__item" 
+  [class.slider__item--active]="slide.active"
+  [style.backgroundImage]="'url('+ slide.img + ')'">
+    <div class="slider-item__wrapper">
+      <div class="slider-item__text">{{ slide.text }}</div>
+      <div class="slider-item__title">{{ slide.title }}</div>
+      <a href="#" class="custom-button">Zobacz</a>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <div (click)="setActive(slide)" *ngFor="let slide of slides; let i = index" [class.slider-nav--active]="slide.active" class="slider-nav">
+      0{{ i + 1 }}
+    </div>
+  </div>
+</div>
