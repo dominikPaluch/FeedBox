@@ -1,0 +1,18 @@
+<div id="up-scroll" class="header">
+  <div class="menu">
+    <div class="menu__logo">
+      <a [routerLink]="['/']">
+        <span class="green">Food</span>
+        <span>Box</span>
+      </a>
+    </div>
+    <div class="menu__links">
+      <a [routerLink]="['/']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="menu-item--active" class="menu-item">Strona główna</a>
+      <a href="#" class="menu-item">O nas</a>
+      <a href="#" class="menu-item">Aktualności</a>
+      <a href="#" class="menu-item">Oferta</a>
+      <a href="#" class="menu-item">Produkty</a>
+      <a [routerLink]="['/kontakt']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="menu-item--active" class="menu-item">Kontakt</a>
+    </div>
+  </div>
+</div>
