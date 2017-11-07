@@ -42,7 +42,7 @@ export class OpinionComponent implements OnInit {
         type: 'profesor Angular',
         name: 'Konrad Klimczak',
         photo: 'kk',
-        description: 'Wyśmienite! Ten Catering zmienił moje życie!'
+        description: 'Lepszy od tego Cateringu jest tylko Bootstrap <3!'
       },
       {
         type: 'street workouter',

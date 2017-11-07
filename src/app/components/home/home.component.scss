@@ -31,7 +31,9 @@ $up-box-color: #6262f1;
     font-size: 40px;
   }
 
+  transition: .3s ease;
   &:hover {
     background: darken($up-box-color, 10%);
+    transition: .3s ease;
   }
 }
