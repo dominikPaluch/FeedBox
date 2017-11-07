@@ -1,4 +1,4 @@
-export interface Animal {
+export interface Opinion {
   name?;
   description?;
   photo?;

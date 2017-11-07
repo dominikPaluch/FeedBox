@@ -1,20 +1,64 @@
+
 .centre-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 25px 15px 15px 30px;
 
   img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 3px solid greenyellow;
     box-shadow: -4px 6px 9px 0px #596474;
   }
 }
 
-.type-title {
+.description-op {
+  padding-top: 15px;
+}
+
+.opinion-name {
+  justify-content: center;
+  padding: 15px 0 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.opinion-type {
+  justify-content: center;
+  font-size: 14px;
+  padding: 0;
+}
+
+.opinion-desc {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 50px;
+  font-style: italic;
   font-weight: 700;
+  align-items: center;
+  font-family: 'Leckerli One', cursive;
+  color: #1b251f;
+  word-wrap: break-word;
+  overflow: hidden;
+  //height: 93px;
+  clear: both;
+  line-height: 22px;
+}
+
+.opinion-item {
+  background: rgba(245, 245, 245, 0.78);;
+  margin: 0 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.type-title {
+  width: 100%;
+  font-weight: bold;
 }
 
 .type {

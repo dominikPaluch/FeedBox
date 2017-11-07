@@ -1,11 +1,8 @@
 @import './app/styles/_base.scss';
 @import './app/styles/_global.scss';
 @import './app/styles/_fonts.scss';
-
-
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,700,800,900&subset=latin-ext');
-
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 $bg: #edeff5;
@@ -49,6 +46,19 @@ html {
   html {
     font-size: 8px;
   }
+
+  .opinion-desc {
+    padding: 10px 3px !important;
+  }
+
+  .opinion-name {
+    padding: 0 !important;
+    font-size: 14px !important;
+  }
+
+  .description-op {
+    padding: 0 15px !important;
+  }
 }
 
 @media screen and (max-width: $md) {
@@ -72,6 +82,7 @@ body {
   color: #000;
   padding-top: 10rem;
 }
+
 // font-family: 'Pacifico', cursive;
 
 .ellipsis {
@@ -187,4 +198,28 @@ body {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+p-carousel .ui-widget-content {
+  border: none;
+  background: transparent;
+}
+
+p-carousel .ui-widget-header {
+  border: none;
+}
+
+p-carousel .ui-widget-header {
+  display: none;
+}
+
+.cover {
+  background: url('./assets/images/opinion-bg.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 45px;
 }

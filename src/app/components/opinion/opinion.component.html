@@ -1,30 +1,25 @@
-<p-carousel circular="circular" autoplayInterval="4000" easing="easeOutStrong"
-            numVisible="3" [value]="animals">
-  <ng-template let-animal pTemplate="item">
-    <div class="row">
-      <div class="col md-12 centre-img">
-        <img pTooltip="Obrazek" src="assets/images/{{animal.photo}}.jpg" width="160">
+<p-carousel circular="circular" autoplayInterval="5000" easing="easeOutStrong"
+            numVisible="3" [value]="opinions">
+  <ng-template let-opinion pTemplate="item">
+    <div class="opinion-item">
+      <div class="row">
+        <div class="col centre-img">
+          <img pTooltip="Obrazek" src="assets/images/{{opinion.photo}}.jpg" width="80">
+        </div>
+        <div class="col md-12 description-op">
+          <div class="opinion-name">
+            <b>{{opinion.name}}</b>
+          </div>
+        </div>
+        <div class="col md-12">
+          <div class="opinion-type">
+            {{opinion.type}}
+          </div>
+        </div>
       </div>
       <div class="row">
-        <div class="col md-3 offset-md-3">
-          <div class="type-title">
-            Typ
-          </div>
-        </div>
-        <div class="col md-5">
-          <div class="type">
-            {{animal.type}}
-          </div>
-        </div>
-        <div class="col md-3 offset-md-3">
-          <div class="type-title">
-            Imię
-          </div>
-        </div>
-        <div class="col md-5">
-          <div class="type">
-            {{animal.name}}
-          </div>
+        <div class="col md-12 opinion-desc">
+          <q>{{opinion.description}}</q>
         </div>
       </div>
     </div>
