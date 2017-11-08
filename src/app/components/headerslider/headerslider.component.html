@@ -1,5 +1,5 @@
 <div class="slider" (mouseenter)="stopRoutine()" (mouseleave)="startRoutine()">
-  <div *ngFor="let slide of slides" class="slider__item" 
+  <div *ngFor="let slide of slides" class="slider__item"
   [class.slider__item--active]="slide.active"
   [style.backgroundImage]="'url('+ slide.img + ')'">
     <div class="slider-item__wrapper">
@@ -9,7 +9,8 @@
     </div>
   </div>
   <div class="slider__nav">
-    <div (click)="setActive(slide)" *ngFor="let slide of slides; let i = index" [class.slider-nav--active]="slide.active" class="slider-nav">
+    <div (click)="setActive(slide)" *ngFor="let slide of slides; let i = index"
+         [class.slider-nav--active]="slide.active" class="slider-nav">
       0{{ i + 1 }}
     </div>
   </div>

@@ -1,7 +1,9 @@
-<app-menu></app-menu>
-<router-outlet></router-outlet>
-<div #upScroll class="up-box animation" [@elementState]="scrollimateOptions.myScrollimation1.currentState" [scrollimate]="scrollimateOptions.myScrollimation1"
-  pageScroll [pageScrollOffset]="0" [pageScrollDuration]="750" [pageScrollEasing]="myEasing" [pageScrollInterruptible]="false"
-  href="#up-scroll">
+<div #upScroll class="up-box animation" [@elementState]="scrollimateOptions.myScrollimation1.currentState"
+     [scrollimate]="scrollimateOptions.myScrollimation1"
+     pageScroll [pageScrollOffset]="0" [pageScrollDuration]="750"
+     [pageScrollEasing]="myEasing" [pageScrollInterruptible]="false" href="#menu">
   <i class="fa fa-arrow-up"></i>
 </div>
+<app-menu id="menu"></app-menu>
+<router-outlet></router-outlet>
+

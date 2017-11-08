@@ -1,0 +1,39 @@
+$up-box-color: #6262f1;
+;
+
+.up-box {
+  width: 80px;
+  height: 80px;
+  background-color: $up-box-color;
+  border-color: darken($up-box-color, 20%);
+  color: #fff;
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -4px 6px 9px 0px #596474;
+  -webkit-animation: light-that-ppg 7s;
+  -moz-animation: light-that-ppg 7s;
+  animation: light-that-ppg 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  visibility: hidden;
+
+  .fa {
+    font-size: 40px;
+  }
+
+  transition: .3s ease;
+  &:hover {
+    background: darken($up-box-color, 10%);
+    transition: .3s ease;
+  }
+}

@@ -5,7 +5,7 @@ import { EasingLogic } from "ng2-page-scroll";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   animations: [
     trigger("elementState", [
       state("inactive", style({
