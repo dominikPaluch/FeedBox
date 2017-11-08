@@ -70,11 +70,9 @@ $price-color: #84b813;
 
     img {
       min-height: 150px;
-      //min-width: 150px;
       max-height: 200px;
-      //max-width: 200px;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease;
+      -webkit-transition: 0.7s ease;
+      transition: 0.7s ease;
     }
 
     &:hover {
@@ -83,17 +81,13 @@ $price-color: #84b813;
       img {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+        border-radius: 50%;
       }
-      transition: .3s ease;
 
       .btns {
         visibility: visible;
         transition: .3s ease;
       }
-    }
-
-    img {
-      border-radius: 50%;
     }
 
     .descr {

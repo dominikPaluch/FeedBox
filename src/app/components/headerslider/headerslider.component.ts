@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Slide } from '../../model/slide';
+import {Component, OnInit} from '@angular/core';
+import {Slide} from '../../model/slide';
 
 @Component({
   selector: 'app-headerslider',
@@ -12,12 +12,13 @@ export class HeadersliderComponent implements OnInit {
   private interval;
   slides: Slide[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     const texts: string[] = ["EcoFood", "Zimowa promocja", "Jesienne boxy"];
     const titles: string[] = [
-      "Sprawdź naszą nową oferte, produktów ekologicznych",
+      "Sprawdź naszą nową ofertę, produktów ekologicznych",
       "Spróbuj naszych rozgrzewających zimowych zestawów obiadowych",
       "Znudzony jesienną monotonnią? Sprawdź nasze posiłki"
     ];
