@@ -11,6 +11,7 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
   id = 1;
+  counterCart = 0;
 
   constructor() {
     this.initData();
@@ -57,6 +58,14 @@ export class ProductListComponent implements OnInit {
 
   getItem(product) {
     console.log(product);
+  }
+
+  addToCart() {
+    this.counterCart++;
+  }
+
+  removeFromCart() {
+    this.counterCart--;
   }
 
   select(id) {

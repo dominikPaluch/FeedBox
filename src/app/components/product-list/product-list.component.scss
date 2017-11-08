@@ -147,3 +147,51 @@ $price-color: #84b813;
     }
   }
 }
+
+.cart-icon {
+  z-index: 100000;
+  position: fixed;
+  top: 65px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 50px;
+  font-size: 18px;
+  flex-direction: column;
+  background-color: #6262f1;
+  border-color: #1313da;
+  color: #fff;
+  bottom: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  box-shadow: -4px 6px 9px 0px #596474;
+
+  i {
+    color: #fff;
+    //line-height: 30px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .counter {
+    color: #ffe308;
+    justify-content: center;
+    display: flex;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  }
+}

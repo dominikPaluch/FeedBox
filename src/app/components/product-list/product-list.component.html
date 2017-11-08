@@ -28,7 +28,7 @@
     <img src="../../../assets/images/{{product.photo}}"
          class="responsive-img">
     <div class="btns">
-      <div class="detail-btn">Dodaj do koszyka</div>
+      <div class="detail-btn" (click)="addToCart()">Dodaj do koszyka</div>
       <div class="detail-btn">Szczegóły</div>
     </div>
     <div class="descr">
@@ -41,3 +41,9 @@
     </div>
   </li>
 </ul>
+<div class="cart-icon" *ngIf="counterCart">
+  <i class="fa fa-shopping-cart"></i>
+  <div class="counter">
+    {{counterCart}}
+  </div>
+</div>
