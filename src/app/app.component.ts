@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { animate, state, style, transition, trigger } from "@angular/animations";
-import { EasingLogic } from "ng2-page-scroll";
+import {Component} from '@angular/core';
+import {animate, state, style, transition, trigger} from "@angular/animations";
+import {EasingLogic} from "ng2-page-scroll";
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,7 @@ export class AppComponent {
       states: [
         {
           method: "pxElement",
-          value: 550,
+          value: 250,
           state: "active",
         },
         {

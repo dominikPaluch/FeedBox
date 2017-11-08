@@ -1,9 +1,50 @@
+$price-color: #84b813;
+
 .our-products {
   text-align: center;
   padding: 45px;
   font-family: 'Leckerli One', cursive;
   font-size: 40px;
   color: #232530;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 112px;
+    height: 3px;
+    background-color: $price-color;
+    top: 112px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.type-list {
+  text-align: center;
+
+  .type-item {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    padding: 0 30px;
+    transition: 0.4s ease;
+    font-weight: 700;
+
+    &:hover {
+      transition: 0.4s ease;
+      color: lighten($price-color, 5%);
+    }
+  }
+
+  .selected {
+    color: $price-color;
+    font-weight: 700;
+  }
 }
 
 .product-list {
@@ -14,12 +55,34 @@
   flex-wrap: wrap;
 
   &-item {
+    cursor: pointer;
     padding: 15px;
     margin: 30px;
     min-width: 200px;
     background-color: #e9e8e8;
     position: relative;
     overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    img {
+      height: 150px;
+      width: 150px;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+    }
+
+    &:hover {
+      border: 1px solid $price-color;
+
+      img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
 
     //&:last-child {
     //  background: red;
@@ -29,18 +92,23 @@
       border-radius: 50%;
     }
 
-    .name {
-      text-align: center;
-      color: #1b251f;
-      font-size: 18px;
-      font-weight: 700;
+    .descr {
+      z-index: 1000;
+
+      .name {
+        text-align: center;
+        color: #1b251f;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .price {
+        color: $price-color;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+      }
     }
 
-    .price {
-      color: #84b813;
-      font-size: 16px;
-      font-weight: 700;
-      text-align: center;
-    }
   }
 }

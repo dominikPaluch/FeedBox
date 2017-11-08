@@ -1,3 +1,3 @@
-export enum TypeOfProductEnum{
+export enum TypeOfProductEnum {
   FRUITS, VEGETABLES, MILKS, BEEF, JUICES
 }

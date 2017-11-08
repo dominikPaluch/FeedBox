@@ -1,6 +1,6 @@
 import {TypeOfProductEnum} from "./typeOfProductEnum";
 
-export class Product {
+export interface Product {
   name?: string;
   price?: string;
   photo?: string;

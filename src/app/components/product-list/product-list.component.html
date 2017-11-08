@@ -1,12 +1,35 @@
 <h2 class="our-products">Nasze produkty</h2>
+<ul class="type-list">
+  <li class="type-item selected" [ngClass]="{'selected': id === 1 }" (click)="select(1)">
+    Wszystkie produkty
+  </li>
+  <li class="type-item" [ngClass]="{'selected': id === 2 }" (click)="select(2)">
+    Warzywa
+  </li>
+  <li class="type-item" [ngClass]="{'selected': id === 3 }" (click)="select(3)">
+    Owoce
+  </li>
+  <li class="type-item" [ngClass]="{'selected': id === 4 }" (click)="select(4)">
+    Produkty mleczne
+  </li>
+  <li class="type-item" [ngClass]="{'selected': id === 5 }" (click)="select(5)">
+    Soki
+  </li>
+  <li class="type-item" [ngClass]="{'selected': id === 6 }" (click)="select(6)">
+    Mięsa
+  </li>
+</ul>
 <ul class="product-list row">
-  <li *ngFor="let product of products" class="product-list-item col md-4">
-    <img src="../../../assets/images/{{product.photo}}" width="200" class="responsive-img">
-    <div class="name">
-      {{product.name}}
-    </div>
-    <div class="price">
-      {{product.price}}
+  <li *ngFor="let product of products" class="product-list-item col md-4"
+      (click)="getItem(product)">
+    <img src="../../../assets/images/{{product.photo}}" width="200" height="200" class="responsive-img">
+    <div class="descr">
+      <div class="name">
+        {{product.name}}
+      </div>
+      <div class="price">
+        {{product.price}}
+      </div>
     </div>
   </li>
 </ul>
