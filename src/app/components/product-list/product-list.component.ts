@@ -21,11 +21,11 @@ export class ProductListComponent implements OnInit {
 
   initData() {
     this.products = [
-      {name: 'Ananas', photo: 'glry1.png', price: '6.99 zł', type: TypeOfProductEnum.FRUITS},
-      {name: 'Kiwi', photo: 'glry2.png', price: '6.99 zł', type: TypeOfProductEnum.FRUITS},
-      {name: 'Cebula', photo: 'glry3.png', price: '6.99 zł', type: TypeOfProductEnum.VEGETABLES},
-      {name: 'Czereśnia', photo: 'glry4.png', price: '6.99 zł', type: TypeOfProductEnum.FRUITS},
-      {name: 'Mix owoców', photo: 'inner1.png', price: '6.99 zł', type: TypeOfProductEnum.FRUITS},
+      {name: 'Ananas', photo: 'glry1.png', price: '7.99 zł', type: TypeOfProductEnum.FRUITS},
+      {name: 'Kiwi', photo: 'glry2.png', price: '3.99 zł', type: TypeOfProductEnum.FRUITS},
+      {name: 'Cebula', photo: 'glry3.png', price: '1.99 zł', type: TypeOfProductEnum.VEGETABLES},
+      {name: 'Czereśnia', photo: 'glry4.png', price: '16.99 zł', type: TypeOfProductEnum.FRUITS},
+      {name: 'Mix owoców', photo: 'inner1.png', price: '22.99 zł', type: TypeOfProductEnum.FRUITS},
       {name: 'Grejfrut', photo: 'inner2.png', price: '6.99 zł', type: TypeOfProductEnum.FRUITS},
       {name: 'Granat', photo: 'product-1.jpg', price: '19.99 zł', type: TypeOfProductEnum.FRUITS},
       {name: 'Rzodkiewka', photo: 'product-2.jpg', price: '9.99 zł', type: TypeOfProductEnum.VEGETABLES},

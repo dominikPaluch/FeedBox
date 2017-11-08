@@ -69,8 +69,10 @@ $price-color: #84b813;
     border: 1px solid transparent;
 
     img {
-      height: 150px;
-      width: 150px;
+      min-height: 150px;
+      //min-width: 150px;
+      max-height: 200px;
+      //max-width: 200px;
       -webkit-transition: all 0.7s ease;
       transition: all 0.7s ease;
     }
@@ -82,11 +84,13 @@ $price-color: #84b813;
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
       }
-    }
+      transition: .3s ease;
 
-    //&:last-child {
-    //  background: red;
-    //}
+      .btns {
+        visibility: visible;
+        transition: .3s ease;
+      }
+    }
 
     img {
       border-radius: 50%;
@@ -110,5 +114,34 @@ $price-color: #84b813;
       }
     }
 
+    .btns {
+      visibility: hidden;
+      transition: .3s ease;
+      position: absolute;
+      top: 25%;
+      font-size: 14px;
+      text-align: center;
+
+      .detail-btn {
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px 20px;
+        color: #fff;
+        font-weight: 700;
+        background: $price-color;
+        opacity: 0.9;
+        transition: .3s ease;
+        border: 2px solid $price-color;
+
+        &:hover {
+          transition: .3s ease;
+          background: whitesmoke;
+          color: $price-color;
+          border: 2px solid $price-color;
+          opacity: 1;
+        }
+
+      }
+    }
   }
 }
