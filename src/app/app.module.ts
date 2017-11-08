@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 export const ROUTES: Routes = [
   {
@@ -37,7 +38,8 @@ export const ROUTES: Routes = [
     HeadersliderComponent,
     ContactComponent,
     MenuComponent,
-    BannerComponent
+    BannerComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

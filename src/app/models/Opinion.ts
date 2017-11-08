@@ -1,4 +1,4 @@
-export interface Opinion {
+export class Opinion {
   name?;
   description?;
   photo?;

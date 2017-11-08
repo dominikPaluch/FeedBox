@@ -1,0 +1,46 @@
+.our-products {
+  text-align: center;
+  padding: 45px;
+  font-family: 'Leckerli One', cursive;
+  font-size: 40px;
+  color: #232530;
+}
+
+.product-list {
+  //width: 100%;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &-item {
+    padding: 15px;
+    margin: 30px;
+    min-width: 200px;
+    background-color: #e9e8e8;
+    position: relative;
+    overflow: hidden;
+
+    //&:last-child {
+    //  background: red;
+    //}
+
+    img {
+      border-radius: 50%;
+    }
+
+    .name {
+      text-align: center;
+      color: #1b251f;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .price {
+      color: #84b813;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}

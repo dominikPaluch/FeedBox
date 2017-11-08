@@ -1,0 +1,12 @@
+<h2 class="our-products">Nasze produkty</h2>
+<ul class="product-list row">
+  <li *ngFor="let product of products" class="product-list-item col md-4">
+    <img src="../../../assets/images/{{product.photo}}" width="200" class="responsive-img">
+    <div class="name">
+      {{product.name}}
+    </div>
+    <div class="price">
+      {{product.price}}
+    </div>
+  </li>
+</ul>
