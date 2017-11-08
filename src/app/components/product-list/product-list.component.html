@@ -25,7 +25,12 @@
 <ul class="product-list row">
   <li *ngFor="let product of products" class="product-list-item col md-4"
       (click)="getItem(product)">
-    <img src="../../../assets/images/{{product.photo}}" width="200" height="200" class="responsive-img">
+    <img src="../../../assets/images/{{product.photo}}"
+         class="responsive-img">
+    <div class="btns">
+      <div class="detail-btn">Dodaj do koszyka</div>
+      <div class="detail-btn">Szczegóły</div>
+    </div>
     <div class="descr">
       <div class="name">
         {{product.name}}
@@ -33,10 +38,6 @@
       <div class="price">
         {{product.price}}
       </div>
-    </div>
-    <div class="btns">
-      <div class="detail-btn">Dodaj do koszyka</div>
-      <div class="detail-btn">Szczegóły</div>
     </div>
   </li>
 </ul>
