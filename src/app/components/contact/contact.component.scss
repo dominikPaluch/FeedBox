@@ -24,6 +24,9 @@ $iconWidth: 5rem;
     margin-top: 5rem;
     display: flex;
   }
+  &-button {
+      text-align: right;
+  }
   &-row {
     position: relative;
     padding-bottom: 2.3rem;
