@@ -1,4 +1,3 @@
-
 <ul class="type-list">
   <li class="type-item selected" [ngClass]="{'selected': id === 1 }" (click)="select(1)">
     Wszystkie produkty
@@ -23,10 +22,14 @@
   </li>
 </ul>
 <div class="product-list row">
-  <div class="col md-6" *ngFor="let product of products">
+  <div class="col md-6" *ngFor="let product of products; let i = index;">
     <div class="product-list-item" (click)="getItem(product)">
       <!-- <img src="../../../assets/images/{{product.photo}}" class="responsive-img"> -->
-      <img src="/assets/images/box10.png" class="responsive-img">
+      <div [ngSwitch]="i % 3">
+        <img *ngSwitchCase="0" src="/assets/images/box10.png" class="responsive-img">
+        <img *ngSwitchCase="1" src="/assets/images/box11.png" class="responsive-img">
+        <img *ngSwitchCase="2" src="/assets/images/box12.png" class="responsive-img">
+      </div>
       <div class="btns">
         <div class="detail-btn" (click)="addToCart()">Dodaj do koszyka</div>
         <div class="detail-btn">Szczegóły</div>
