@@ -1,4 +1,4 @@
-<h2 class="our-products">Nasze produkty</h2>
+<h2 class="custom-section padding-top-10 padding-bottom-5">Nasze produkty</h2>
 <ul class="type-list">
   <li class="type-item selected" [ngClass]="{'selected': id === 1 }" (click)="select(1)">
     Wszystkie produkty
@@ -22,28 +22,24 @@
     Mięsa
   </li>
 </ul>
-<ul class="product-list row">
-  <li *ngFor="let product of products" class="product-list-item col md-4"
-      (click)="getItem(product)">
-    <img src="../../../assets/images/{{product.photo}}"
-         class="responsive-img">
-    <div class="btns">
-      <div class="detail-btn" (click)="addToCart()">Dodaj do koszyka</div>
-      <div class="detail-btn">Szczegóły</div>
-    </div>
-    <div class="descr">
-      <div class="name">
-        {{product.name}}
+<div class="product-list row">
+  <div class="col md-6" *ngFor="let product of products">
+    <div class="product-list-item" (click)="getItem(product)">
+      <!-- <img src="../../../assets/images/{{product.photo}}" class="responsive-img"> -->
+      <img src="/assets/images/box10.png" class="responsive-img">
+      <div class="btns">
+        <div class="detail-btn" (click)="addToCart()">Dodaj do koszyka</div>
+        <div class="detail-btn">Szczegóły</div>
       </div>
-      <div class="price">
-        {{product.price}}
+      <div class="descr">
+        <div class="name">
+          {{product.name}}
+        </div>
+        <div class="price">
+          {{product.price}}
+        </div>
       </div>
     </div>
-  </li>
-</ul>
-<div class="cart-icon" *ngIf="counterCart">
-  <i class="fa fa-shopping-cart"></i>
-  <div class="counter">
-    {{counterCart}}
   </div>
+
 </div>

@@ -1,29 +1,8 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 $price-color: #84b813;
-
-.our-products {
-  text-align: center;
-  padding: 45px;
-  font-family: 'Leckerli One', cursive;
-  font-size: 40px;
-  color: #232530;
-  position: relative;
-
-  &:after {
-    position: absolute;
-    content: '';
-    width: 112px;
-    height: 3px;
-    background-color: $price-color;
-    top: 112px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-}
-
 .type-list {
   text-align: center;
-
   .type-item {
     display: inline-block;
     font-size: 18px;
@@ -34,13 +13,11 @@ $price-color: #84b813;
     padding: 0 30px;
     transition: 0.4s ease;
     font-weight: 700;
-
     &:hover {
       transition: 0.4s ease;
       color: lighten($price-color, 5%);
     }
   }
-
   .selected {
     color: $price-color;
     font-weight: 700;
@@ -54,55 +31,44 @@ $price-color: #84b813;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-
+  padding-bottom: 5rem;
   &-item {
-    //display: flex;
-    //justify-content: center;
-
+    min-height: 30rem;
+    margin-bottom: 2rem;
     cursor: pointer;
-    padding: 15px 15px 45px 15px;
-    margin: 30px;
-    min-width: 200px;
     background-color: #e9e8e8;
     position: relative;
     overflow: hidden;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid transparent;
-
+    text-align: center;
+    padding-bottom: 5rem;
     &:hover {
       border: 1px solid $price-color;
-
       img {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
       }
-
       .btns {
-        visibility: visible;
-        transition: .3s ease;
+        opacity: 1;
+        pointer-events: all;
       }
     }
-
     img {
-      min-height: 150px;
-      //max-height: 200px;
       -webkit-transition: 0.7s ease;
       transition: 0.7s ease;
+      width: 80%;
     }
-
     .btns {
-      visibility: hidden;
       transition: .5s ease;
       position: absolute;
-      margin-left: -15px;
+      opacity: 0;
+      pointer-events: none;
       top: 25%;
       font-size: 14px;
       text-align: center;
       width: 100%;
-
       .detail-btn {
         padding: 10px;
         border-radius: 5px;
@@ -110,12 +76,10 @@ $price-color: #84b813;
         color: #fff;
         font-weight: 700;
         background: $price-color;
-        opacity: 0.9;
-        transition: .3s ease;
+        opacity: 1;
         border: 2px solid $price-color;
-
+        @include transition(all 0.3s ease);
         &:hover {
-          transition: .5s ease;
           background: whitesmoke;
           color: $price-color;
           border: 2px solid $price-color;
@@ -123,21 +87,19 @@ $price-color: #84b813;
         }
       }
     }
-
     .descr {
-      z-index: 1000;
+      z-index: 1;
       width: 100%;
-      margin-left: -15px;
       position: absolute;
-      bottom: 15px;
-
+      bottom: 0;
+      background-color: $black;
+      padding: 1rem 0;
       .name {
         text-align: center;
-        color: #1b251f;
+        color: #fff;
         font-size: 18px;
         font-weight: 700;
       }
-
       .price {
         color: $price-color;
         font-size: 16px;
@@ -178,14 +140,11 @@ $price-color: #84b813;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   box-shadow: -4px 6px 9px 0px #596474;
-
   i {
-    color: #fff;
-    //line-height: 30px;
+    color: #fff; //line-height: 30px;
     justify-content: center;
     display: flex;
   }
-
   .counter {
     color: #ffe308;
     justify-content: center;
