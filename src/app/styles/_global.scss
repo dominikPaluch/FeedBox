@@ -1,69 +1,96 @@
 @import './app/styles/_variables.scss';
 @import './app/styles/_mixins.scss';
-
 a {
-    color: $black;
+  color: $black;
 }
 
 .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  box-shadow: -1px 0px 8px rgba($black, 0.5);
+  &__logo {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 0 5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    box-shadow: -1px 0px 8px rgba($black, 0.5);
-    &__logo {
-        display: flex;
-        align-items: center;
-        font-size: 3rem;
-        font-family: 'Pacifico', cursive;
-        color: $black;
-        span {
-            &:first-child {
-                color: $green;
-            }
-        }
-    }
-    &__links {
-
-    }
-
-    &-item {
-        font-size: 1.8rem;
-        line-height: 2rem;
-        padding: 4rem 2rem;
-        display: block;
-        float: left;
-        color: $black;
-        font-weight: 500;
-        @include transition(color 0.5s ease);
-        &:hover {
-            color: $green;
-        }
-    }
-    &-item--active {
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: $black;
+    span {
+      &:first-child {
         color: $green;
+      }
     }
+  }
+  &__links {}
+  &-item {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    padding: 4rem 2rem;
+    display: block;
+    float: left;
+    color: $black;
+    font-weight: 500;
+    @include transition(color 0.5s ease);
+    &:hover {
+      color: $green;
+    }
+  }
+  &-item--active {
+    color: $green;
+  }
 }
 
 .custom-button {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    padding: 1rem 2.5rem;
-    border: 2px solid $green;
-    background-color: $green;
-    border-radius: 3px;
-    color: #fff;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 1rem 2.5rem;
+  border: 2px solid $green;
+  background-color: $green;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include transition(color 0.5s ease, background-color 0.5s ease);
+  &:hover {
+    background-color: transparent;
+    color: $green;
+  }
+}
+
+.custom {
+  &-title {
+    font-size: 2rem;
+    color: $black;
     font-weight: 600;
-    text-transform: uppercase;
-    @include transition(color 0.5s ease, background-color 0.5s ease);
+    margin: 0;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  &-text {
+    font-size: 1.6rem;
+    color: $black;
+    font-weight: 200;
+    margin: 0;
+    text-align: left;
+    line-height: 2rem;
+  }
+  &-link {
+    font-size: 1.6rem;
+    color: $black;
+    font-weight: 200;
+    margin: 0;
+    text-align: left;
+    line-height: 2rem;
+    @include transition(color 0.3s ease);
     &:hover {
-        background-color: transparent;
-        color: $green;
+      color: $green;
     }
+  }
 }

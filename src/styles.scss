@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,700,800,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-
 $bg: #edeff5;
 $uh: 1700px;
 $hd: 1450px;
@@ -17,7 +16,7 @@ li {
   padding: 0;
 }
 
-ul > li {
+ul>li {
   margin: 0;
   padding: 0;
 }
@@ -46,16 +45,13 @@ html {
   html {
     font-size: 8px;
   }
-
   .opinion-desc {
     padding: 10px 3px !important;
   }
-
   .opinion-name {
     padding: 0 !important;
     font-size: 14px !important;
   }
-
   .description-op {
     padding: 0 15px !important;
   }
@@ -84,7 +80,6 @@ body {
 }
 
 // font-family: 'Pacifico', cursive;
-
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -160,7 +155,6 @@ body {
 }
 
 //loader
-
 .spinner {
   margin: 0px auto;
   width: 50px;
@@ -222,4 +216,55 @@ p-carousel .ui-widget-header {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-top: 45px;
+}
+
+.section {
+  padding: 0;
+  padding-left: 30rem;
+  padding-right: 30rem;
+  background-color: #fff;
+}
+
+.margin-top-5 {
+  margin-top: 5rem;
+}
+
+.margin-top-10 {
+  margin-top: 10rem;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10rem;
+}
+
+.padding-top-5 {
+  padding-top: 5rem;
+}
+
+.padding-top-10 {
+  padding-top: 10rem;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5rem;
+}
+
+.padding-bottom-10 {
+  padding-bottom: 10rem;
+}
+
+* {
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+}
+
+.row-margin {
+  margin-left: -15px;
+  margin-right: -15px;
 }
