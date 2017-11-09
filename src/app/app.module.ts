@@ -1,23 +1,24 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {AppComponent} from './app.component';
-import {HomeComponent} from './components/home/home.component';
-import {OpinionComponent} from './components/opinion/opinion.component';
-import {HeadersliderComponent} from './components/headerslider/headerslider.component';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { OpinionComponent } from './components/opinion/opinion.component';
+import { HeadersliderComponent } from './components/headerslider/headerslider.component';
 
-import {CarouselModule, TooltipModule} from 'primeng/primeng';
-import {Ng2PageScrollModule} from 'ng2-page-scroll';
-import {Ng2ScrollimateModule} from 'ng2-scrollimate';
-import {ContactComponent} from './components/contact/contact.component';
-import {RouterModule, Routes} from '@angular/router';
-import {MenuComponent} from './components/menu/menu.component';
-import {BannerComponent} from './components/banner/banner.component';
-import {ProductListComponent} from './components/product-list/product-list.component';
-import {MapComponent} from './components/map/map.component';
-import {AgmCoreModule} from '@agm/core';
+import { CarouselModule, TooltipModule } from 'primeng/primeng';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { Ng2ScrollimateModule } from 'ng2-scrollimate';
+import { ContactComponent } from './components/contact/contact.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MenuComponent } from './components/menu/menu.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { MapComponent } from './components/map/map.component';
+import { AgmCoreModule } from '@agm/core';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductsComponent } from './components/products/products.component';
 
 export const ROUTES: Routes = [
   {
@@ -25,6 +26,12 @@ export const ROUTES: Routes = [
     component: ContactComponent,
     data: {
       title: 'FoodBox - Kontakt'
+    }
+  }, {
+    path: 'produkty',
+    component: ProductsComponent,
+    data: {
+      title: 'FoodBox - Produkty'
     }
   }, {
     path: '',
@@ -44,7 +51,8 @@ export const ROUTES: Routes = [
     BannerComponent,
     ProductListComponent,
     MapComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,24 @@
-<h2 class="custom-section padding-top-10 padding-bottom-5">Nasze produkty</h2>
+
 <ul class="type-list">
   <li class="type-item selected" [ngClass]="{'selected': id === 1 }" (click)="select(1)">
     Wszystkie produkty
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 7 }" (click)="select(7)">
+  <li class="type-item" [ngClass]="{'selected': id === 7 }" *ngIf="getProductsNumber(7)" (click)="select(7)">
     FoodBoxy
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 2 }" (click)="select(2)">
+  <li class="type-item" [ngClass]="{'selected': id === 2 }" (click)="select(2)" *ngIf="getProductsNumber(2)">
     Warzywa
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 3 }" (click)="select(3)">
+  <li class="type-item" [ngClass]="{'selected': id === 3 }" (click)="select(3)" *ngIf="getProductsNumber(3)">
     Owoce
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 4 }" (click)="select(4)">
+  <li class="type-item" [ngClass]="{'selected': id === 4 }" (click)="select(4)" *ngIf="getProductsNumber(4)">
     Produkty mleczne
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 5 }" (click)="select(5)">
+  <li class="type-item" [ngClass]="{'selected': id === 5 }" (click)="select(5)" *ngIf="getProductsNumber(5)">
     Soki
   </li>
-  <li class="type-item" [ngClass]="{'selected': id === 6 }" (click)="select(6)">
+  <li class="type-item" [ngClass]="{'selected': id === 6 }" (click)="select(6)" *ngIf="getProductsNumber(6)">
     Mięsa
   </li>
 </ul>
