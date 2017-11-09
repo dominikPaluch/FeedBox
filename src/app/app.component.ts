@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
-import {animate, state, style, transition, trigger} from "@angular/animations";
-import {EasingLogic} from "ng2-page-scroll";
+import { Component, OnInit } from '@angular/core';
+import { animate, state, style, transition, trigger } from "@angular/animations";
+import { EasingLogic } from "ng2-page-scroll";
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ import {EasingLogic} from "ng2-page-scroll";
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
 
   scrollimateOptions: any = {
@@ -55,4 +56,15 @@ export class AppComponent {
       return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
     }
   };
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
+  }
 }
