@@ -17,6 +17,7 @@ import {BannerComponent} from './components/banner/banner.component';
 import {ProductListComponent} from './components/product-list/product-list.component';
 import {MapComponent} from './components/map/map.component';
 import {AgmCoreModule} from '@agm/core';
+import { FooterComponent } from './components/footer/footer.component';
 
 export const ROUTES: Routes = [
   {
@@ -42,7 +43,8 @@ export const ROUTES: Routes = [
     MenuComponent,
     BannerComponent,
     ProductListComponent,
-    MapComponent
+    MapComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

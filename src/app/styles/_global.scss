@@ -4,48 +4,6 @@ a {
   color: $black;
 }
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 0 5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  box-shadow: -1px 0px 8px rgba($black, 0.5);
-  &__logo {
-    display: flex;
-    align-items: center;
-    font-size: 3rem;
-    font-family: 'Pacifico', cursive;
-    color: $black;
-    span {
-      &:first-child {
-        color: $green;
-      }
-    }
-  }
-  &__links {}
-  &-item {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    padding: 4rem 2rem;
-    display: block;
-    float: left;
-    color: $black;
-    font-weight: 500;
-    @include transition(color 0.5s ease);
-    &:hover {
-      color: $green;
-    }
-  }
-  &-item--active {
-    color: $green;
-  }
-}
 
 .custom-button {
   font-size: 1.4rem;
@@ -78,7 +36,6 @@ a {
     color: $black;
     font-weight: 200;
     margin: 0;
-    text-align: left;
     line-height: 2rem;
   }
   &-link {
@@ -86,11 +43,18 @@ a {
     color: $black;
     font-weight: 200;
     margin: 0;
-    text-align: left;
     line-height: 2rem;
     @include transition(color 0.3s ease);
     &:hover {
-      color: $green;
+      color: $green !important;
     }
   }
+}
+
+.bold {
+    font-weight: 600 !important;
+}
+
+.green {
+    color: $green !important;
 }

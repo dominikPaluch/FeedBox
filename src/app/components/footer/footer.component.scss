@@ -1,0 +1,89 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+$footerBg: #1f232b;
+$footerDark: #191c22;
+$fontColor: #9a9a9a;
+.footer {
+  background-color: $footerBg;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: center;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .custom-text {
+    color: $fontColor;
+  }
+  .custom-link {
+    color: $fontColor;
+  }
+  &__row {
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    font-size: 3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &__logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    span {
+      color: $green;
+    }
+  }
+  &-group {
+    position: relative;
+    margin: 3rem auto;
+    width: 80%;
+    &__icon {
+      position: absolute;
+      color: $green;
+      top: 0;
+      left: 0;
+      width: 5rem;
+      height: 5rem;
+      font-size: 2rem;
+      line-height: 5rem;
+      text-align: center;
+    }
+    &__input {
+      height: 5rem;
+      background-color: transparent;
+      border-radius: 3px;
+      box-shadow: none;
+      color: $black;
+      padding-left: 5rem;
+      font-size: 1.6rem;
+      line-height: 5rem;
+      font-weight: 300;
+      border: 2px solid #d6d6d6;
+      width: 100%;
+      @include transition(border-color 0.3s ease);
+      &:focus {
+        border-color: $green;
+      }
+    }
+  }
+}
+
+.copyright {
+    background-color: $footerDark;
+    color: $fontColor;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .custom-text {
+      color: $fontColor;
+    }
+}

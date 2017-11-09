@@ -19,12 +19,14 @@ a {
   &__logo {
     display: flex;
     align-items: center;
-    font-size: 3rem;
-    font-family: 'Pacifico', cursive;
+    font-size: 3rem; // font-family: 'Pacifico', cursive;
+    font-weight: 700;
     color: $black;
     span {
       &:first-child {
         color: $green;
+        display: block;
+        float: left;
       }
     }
   }
