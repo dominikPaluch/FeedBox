@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 2016-06-07, 13:33:37
+    Author     : Szabat
+*/
+
+$uh: 1700px;
+$hd: 1450px;
+$lg: 1100px;
+$md: 900px;
+$sm: 600px;
+@media screen and (max-width: $uh) {
+  .menu {
+    padding: 0 10rem;
+  }
+  .section {
+    padding: 0 10rem;
+  }
+  .default-padding {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (max-width: $hd) {
+  .section {
+    padding: 0 5rem;
+  }
+  .default-padding {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: $lg) {}
+
+@media screen and (max-width: $md) {
+  .up-box {
+    display: none !important;
+  }
+  .section {
+    padding: 0 1.5rem;
+  }
+  .default-padding {
+    padding: 0 1.5rem;
+  }
+  body {
+    padding-top: 8.5rem;
+  }
+  .custom-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .footer {
+    &>div {
+      margin-bottom: 5rem;
+    }
+  }
+}

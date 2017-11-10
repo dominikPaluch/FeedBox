@@ -62,3 +62,25 @@
 }
 
 .type {}
+
+$uh: 1700px;
+$hd: 1450px;
+$lg: 1100px;
+$md: 900px;
+$sm: 600px;
+@media screen and (max-width: $uh) {}
+
+@media screen and (max-width: $hd) {}
+
+@media screen and (max-width: $lg) {}
+
+@media screen and (max-width: $md) {
+  .opinion {
+    &-item {
+      width: calc(100% - 2rem);
+    }
+    &-desc {
+      width: 90%;
+    }
+  }
+}

@@ -26,3 +26,33 @@
     margin-bottom: 3rem;
   }
 }
+
+$uh: 1700px;
+$hd: 1450px;
+$lg: 1100px;
+$md: 900px;
+$sm: 600px;
+@media screen and (max-width: $uh) {}
+
+@media screen and (max-width: $hd) {}
+
+@media screen and (max-width: $lg) {}
+
+@media screen and (max-width: $md) {
+  .home-about {
+    background: #fff;
+    height: auto;
+    text-align: center;
+    padding-bottom: 5rem; 
+    &__title {
+      margin-top: 5rem;
+      padding-right: 0;
+    }
+    &__subtitle {
+      padding-right: 0;
+    }
+    &__text {
+      padding-right: 0;
+    }
+  }
+}
