@@ -1,25 +1,20 @@
-<p-carousel circular="circular" autoplayInterval="5000" easing="easeOutStrong"
-            numVisible="3" [value]="opinions">
+<h2 class="banner__title white">
+  Opinie naszych klientów
+</h2>
+<p-carousel circular="circular" autoplayInterval="5000" easing="easeOutStrong" numVisible="1" [value]="opinions">
   <ng-template let-opinion pTemplate="item">
     <div class="opinion-item">
       <div class="row">
-        <div class="col centre-img">
-          <img pTooltip="Obrazek" src="assets/images/{{opinion.photo}}.jpg" width="80">
-        </div>
-        <div class="col md-12 description-op">
-          <div class="opinion-name">
-            <b>{{opinion.name}}</b>
-          </div>
-        </div>
-        <div class="col md-12">
-          <div class="opinion-type">
-            {{opinion.type}}
-          </div>
+        <div class="opinion-desc">
+          {{opinion.description}}
         </div>
       </div>
       <div class="row">
-        <div class="col md-12 opinion-desc">
-          <q>{{opinion.description}}</q>
+          <div class="opinion-name">
+            <b>{{opinion.name}}</b>
+          </div>
+        <div class="opinion-type">
+          {{opinion.type}}
         </div>
       </div>
     </div>

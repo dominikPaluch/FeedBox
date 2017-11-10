@@ -17,19 +17,19 @@ export class OpinionComponent implements OnInit {
         type: 'student',
         name: 'Krystian Szabat',
         photo: 'ks',
-        description: 'Wyśmienite! Ten Catering zmienił moje życie!'
+        description: 'Wyśmienite! Ten Catering zmienił moje życie! Cała firma turlała się po podłodze z przejedzenia.'
       },
       {
         type: 'Lekarz dentysta',
         name: 'Ewa Płuska',
         photo: 'ep',
-        description: 'Wooow, przepyszne ! Polecam każdemu!'
+        description: 'Wooow, przepyszne! Polecam każdemu! Świetna oferta i super produkty.'
       },
       {
         type: 'taksówkarz',
         name: 'Robert Strawa',
         photo: 'ls2',
-        description: 'Ale Smaczne! Lepiej gotuje tylko Teściowa :D'
+        description: 'Ale Smaczne! Lepiej gotuje tylko Teściowa :D Ceny rewelacyjne, nawet taka złotówa jak ja sobie może pozwolić.'
       },
       {type: 'student', name: 'Tomek Sitkiewicz', photo: 'ls', description: 'Tak dobrego obiadku nie jadłem od dawna!'},
       {

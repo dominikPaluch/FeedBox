@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,700,800,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
 $bg: #edeff5;
 $uh: 1700px;
 $hd: 1450px;
@@ -208,13 +209,11 @@ p-carousel .ui-widget-header {
 }
 
 .cover {
-  background: url('./assets/images/opinion-bg.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('./assets/images/opinion.jpg') no-repeat center center;
   background-size: cover;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-attachment: fixed;
 }
 
 .section {
@@ -288,4 +287,8 @@ p-carousel .ui-widget-header {
   .fa[_ngcontent-c0] {
     font-size: 2rem !important;
   }
+}
+
+.white {
+  color: #fff !important;
 }
