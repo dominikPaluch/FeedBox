@@ -1,8 +1,33 @@
 <app-headerslider></app-headerslider>
-<div class="row section">
-  <h2 class="custom-section padding-top-10 padding-bottom-5">Nasze najnowsze produkty</h2>
-  <app-product-list nums="10"></app-product-list>
+<div class="row section home-about">
+  <div class="col md-12">
+    <h2 class="home-about__title">
+      Witaj w
+      <span class="green">Food</span>Box
+    </h2>
+    <h3 class="home-about__subtitle">
+      Catering przez duże C
+    </h3>
+    <div class="home-about__text">
+      FoodBox to firma cateringowa z bardzo dużym doświadczeniem w zakresie obsługi Klientów indywidualnych, biznesowych, jak i
+      indywidualnych. <br/>Jeśli potrzebny Ci prawdziwy ekspert od profesjonalnego przygotowywania i serwowania potraw, które
+      umilą Twoim gościom uczestnictwo w imprezie – warto skorzystać właśnie z naszej oferty. <br/> Możesz być pewien, że nie zawiedziemy
+      Twojego zaufania.
+    </div>
+    <div class="home-about__text">
+      Naszym priorytetem jest zawsze przygotowanie oferty w pełni dopasowanej do indywidualnych potrzeb naszego Klienta. Wiemy
+      doskonale, że każda impreza ma nieco inny charakter, a zapewnienie jej odpowiedniej oprawy cateringowej to jeden z
+      fundamentów zadowolenia Gości.
+    </div>
+    <div>
+      <a [routerLink]="['/o-nas']" class="custom-button">Czytaj więcej</a>
+    </div>
+  </div>
 </div>
 <div class="cover">
   <app-opinion></app-opinion>
+</div>
+<div class="row section">
+  <h2 class="custom-section padding-top-10 padding-bottom-5">Nasze najnowsze produkty</h2>
+  <app-product-list nums="10"></app-product-list>
 </div>
