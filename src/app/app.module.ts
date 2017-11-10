@@ -20,6 +20,7 @@ import { AgmCoreModule } from '@agm/core';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SingleproductComponent } from './components/singleproduct/singleproduct.component';
+import { AboutComponent } from './components/about/about.component';
 
 export const ROUTES: Routes = [
   {
@@ -41,6 +42,12 @@ export const ROUTES: Routes = [
       title: 'FoodBox - Produkt'
     }
   }, {
+    path: 'o-nas',
+    component: AboutComponent,
+    data: {
+      title: 'FoodBox - O nas'
+    }
+  }, {
     path: '',
     component: HomeComponent,
     pathMatch: 'full'
@@ -60,7 +67,8 @@ export const ROUTES: Routes = [
     MapComponent,
     FooterComponent,
     ProductsComponent,
-    SingleproductComponent
+    SingleproductComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
