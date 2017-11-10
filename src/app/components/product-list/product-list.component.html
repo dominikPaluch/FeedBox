@@ -1,4 +1,4 @@
-<ul class="type-list">
+<ul class="type-list" *ngIf="!hidefilter">
   <li class="type-item selected" [ngClass]="{'selected': id === 1 }" (click)="select(1)">
     Wszystkie produkty
   </li>
@@ -32,7 +32,7 @@
       </div>
       <div class="btns">
         <div class="detail-btn" (click)="addToCart()">Dodaj do koszyka</div>
-        <div class="detail-btn">Szczegóły</div>
+        <a [routerLink]="['/produkt']" class="detail-btn">Szczegóły</a>
       </div>
       <div class="descr">
         <div class="name">

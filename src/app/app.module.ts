@@ -19,6 +19,7 @@ import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SingleproductComponent } from './components/singleproduct/singleproduct.component';
 
 export const ROUTES: Routes = [
   {
@@ -32,6 +33,12 @@ export const ROUTES: Routes = [
     component: ProductsComponent,
     data: {
       title: 'FoodBox - Produkty'
+    }
+  }, {
+    path: 'produkt',
+    component: SingleproductComponent,
+    data: {
+      title: 'FoodBox - Produkt'
     }
   }, {
     path: '',
@@ -52,7 +59,8 @@ export const ROUTES: Routes = [
     ProductListComponent,
     MapComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    SingleproductComponent
   ],
   imports: [
     BrowserModule,

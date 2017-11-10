@@ -1,0 +1,44 @@
+<app-banner>
+  <h1 class="banner__title">Szczegóły produktu</h1>
+  <div class="banner__links">
+    <a [routerLink]="['/']">Strona główna</a>
+    <a [routerLink]="['/produkty']">Produkty</a>
+    <a role="button">Zestaw1</a>
+  </div>
+</app-banner>
+
+<div class="row section">
+  <div class="custom-section padding-top-10"></div>
+  <div class="row padding-bottom-10">
+    <div class="product__img">
+      <img src="/assets/images/box10.png" alt="Zestaw1 - Zdjęcie" class="responsive-img" />
+    </div>
+    <div class="product__info">
+      <h1 class="product__title">Zestaw1</h1>
+      <p class="product__text">
+        Pieczony łosoś z dodatkiem imbiru, podany z pieczonym porem na sałatce ze skorzonerą, burakami, szpinakiem, polany
+        malinowym sosem balsamico (300g)
+      
+      </p>
+      <p class="product__text">
+        Zestaw zawiera deser:<br/>
+        Czekoladowe ciastko podane na ciepło z konfiturą wiśniową (150g)
+      </p>
+      <p class="product__text">
+        Do wyboru w ramach zestawu ziemniaki gotowane, ziemniaki pieczone lub frytki (200g)
+      </p>
+      <p class="product__text">
+        Zestaw dla jednej osoby. Istnieje opcja powiększenia zestawu o dodatkową sztukę mięsa.
+      </p>
+      <p class="product__alert">
+        Zestaw zawiera składniki alergenne: tłuszcz roślinny, orzechy
+      </p>
+      <div class="product__price">
+        <p>Cena jednostkowa: <span class="green">10.50 zł</span></p>
+        <p>Cena przy zakupie powyżej 10 porcji: <span class="green">9.50 zł</span></p>
+      </div>
+    </div>
+  </div>
+  <h3 class="custom-section padding-bottom-5">Pasujące dodatki</h3>
+  <app-product-list nums="4" hidefilter="1"></app-product-list>
+</div>

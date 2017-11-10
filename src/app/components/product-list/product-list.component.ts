@@ -10,6 +10,7 @@ import { TypeOfProductEnum } from "../../models/typeOfProductEnum";
 export class ProductListComponent implements OnInit {
 
   @Input() nums: number;
+  @Input() hidefilter: number;
 
   products: Product[];
   copyProducts: Product[];
@@ -20,7 +21,6 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('aaa')
     this.initData();
   }
 
