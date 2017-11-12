@@ -64,7 +64,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const title = this.getTitle(this.router.routerState, this.router.routerState.root).join('-');
-        console.log('title', title);
         this.titleService.setTitle(title);
         window.scrollTo(0, 0);
       } else {
