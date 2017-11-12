@@ -4,6 +4,7 @@ export class News {
     desc: string;
     date: string;
     img: string;
+    text: string;
 }
 
 

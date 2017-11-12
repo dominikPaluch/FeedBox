@@ -1,0 +1,27 @@
+<app-banner>
+  <h1 class="banner__title">Aktualności</h1>
+  <div class="banner__links">
+    <a [routerLink]="['/']">Strona główna</a>
+    <a [routerLink]="['/aktualnosci']">Aktualności</a>
+    <a role="button">Podgląd aktualności</a>
+  </div>
+</app-banner>
+
+<div class="row section">
+  <div class="custom-section padding-top-10"></div>
+  <div class="row padding-bottom-10">
+    <div class="singlenews__img">
+      <img src="{{ news.img }}" alt="{{ news.title }}" class="responsive-img" />
+    </div>
+    <div class="singlenews__info">
+        <h1 class="singlenews__text">{{ news.date }}</h1>
+      <h1 class="singlenews__title">{{ news.title }}</h1>
+      <p class="singlenews__text">
+        {{ news.desc }}
+      </p>
+      <p class="singlenews__desc">
+        {{ news.text }}
+      </p>
+    </div>
+  </div>
+</div>
