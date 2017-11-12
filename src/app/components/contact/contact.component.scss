@@ -25,7 +25,7 @@ $iconWidth: 5rem;
     display: flex;
   }
   &-button {
-      text-align: right;
+    text-align: right;
   }
   &-row {
     position: relative;
@@ -38,7 +38,7 @@ $iconWidth: 5rem;
   }
   &-group {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     &__icon {
       position: absolute;
       color: $green;
@@ -88,6 +88,47 @@ $iconWidth: 5rem;
       &:focus {
         border-color: $green;
       }
+    }
+  }
+}
+
+$uh: 1700px;
+$hd: 1450px;
+$lg: 1100px;
+$md: 900px;
+$sm: 600px;
+@media screen and (max-width: $uh) {}
+
+@media screen and (max-width: $hd) {}
+
+@media screen and (max-width: $lg) {}
+
+@media screen and (max-width: $md) {
+  .mobile-width {
+    width: 100%;
+    padding: 0;
+  }
+  .contact {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-button {
+      width: 100%;
+      text-align: center;
+    }
+    &-group {
+      margin-bottom: 1.5rem;
+    }
+    &__info {
+      width: 100%;
+      padding-left: 0;
+      padding: 0 15px;
+    }
+    &__form {
+      order: 3;
+      width: 100%;
+      margin-top: 5rem;
+      padding: 0 15px;
     }
   }
 }

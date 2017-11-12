@@ -9,7 +9,7 @@
   <h2 class="custom-section padding-top-10 padding-bottom-5">Aktualności</h2>
   <div class="row padding-bottom-5">
     <div class="news-wrapper">
-      <div class="col md-8 sm-12 xs-24 relative" *ngFor="let news of newsList">
+      <div class="col lg-6 md-8 sm-12 xs-24 relative" *ngFor="let news of newsList">
         <a [routerLink]="['/aktualnosci/' + news.id]" class="news">
           <div class="news__header">
             <img src="{{ news.img }}" class="news__img responsive-img" alt="Aktualności" />
