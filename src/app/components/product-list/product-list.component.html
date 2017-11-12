@@ -20,7 +20,7 @@
   <li class="type-item" [ngClass]="{'selected': id === 6 }" (click)="select(6)" *ngIf="getProductsNumber(6)">
     Mięsa
   </li>
-</ul>
+</ul> 
 <div class="product-list row">
   <div class="col lg-6 md-8 sm-12 xs-24" *ngFor="let product of products; let i = index;">
     <div class="product-list-item" (click)="getItem(product)">
