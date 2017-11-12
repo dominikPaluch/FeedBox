@@ -1,0 +1,29 @@
+<app-banner>
+  <h1 class="banner__title">Aktualności</h1>
+  <div class="banner__links">
+    <a [routerLink]="['/']">Strona główna</a>
+    <a role="button">Aktualności</a>
+  </div>
+</app-banner>
+<div class="row section">
+  <h2 class="custom-section padding-top-10 padding-bottom-5">Aktualności</h2>
+  <div class="row padding-bottom-5">
+    <div class="news-wrapper">
+      <div class="col md-8 sm-12 xs-24 relative" *ngFor="let news of newsList">
+        <a [routerLink]="['/aktualnosci/' + news.id]" class="news">
+          <div class="news__header">
+            <img src="{{ news.img }}" class="news__img responsive-img" alt="Aktualności" />
+          </div>
+          <div class="news__body">
+            <div class="news__date">{{ news.date }}</div>
+            <div class="news__title">{{ news.title }}</div>
+            <div class="news__desc">{{ news.desc }}</div>
+          </div>
+          <div class="news__footer">
+            <a [routerLink]="['/aktualnosci/' + news.id]" class="custom-button">Zobacz</a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SingleproductComponent } from './components/singleproduct/singleproduct.component';
 import { AboutComponent } from './components/about/about.component';
+import { NewslistComponent } from './components/newslist/newslist.component';
 
 export const ROUTES: Routes = [
   {
@@ -48,6 +49,12 @@ export const ROUTES: Routes = [
       title: 'FoodBox - O nas'
     }
   }, {
+    path: 'aktualnosci',
+    component: NewslistComponent,
+    data: {
+      title: 'FoodBox - Aktualności'
+    }
+  }, {
     path: '',
     component: HomeComponent,
     pathMatch: 'full'
@@ -68,7 +75,8 @@ export const ROUTES: Routes = [
     FooterComponent,
     ProductsComponent,
     SingleproductComponent,
-    AboutComponent
+    AboutComponent,
+    NewslistComponent
   ],
   imports: [
     BrowserModule,
