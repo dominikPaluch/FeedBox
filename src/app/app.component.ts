@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from "@angular/animations";
 import { EasingLogic } from "ng2-page-scroll";
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -57,14 +58,30 @@ export class AppComponent implements OnInit {
     }
   };
 
-  constructor(private router: Router) { }
+  constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const title = this.getTitle(this.router.routerState, this.router.routerState.root).join('-');
+        console.log('title', title);
+        this.titleService.setTitle(title);
+        window.scrollTo(0, 0);
+      } else {
         return;
       }
-      window.scrollTo(0, 0);
     });
+  }
+
+  getTitle(state, parent) {
+    const data = [];
+    if (parent && parent.snapshot.data && parent.snapshot.data.title) {
+      data.push(parent.snapshot.data.title);
+    }
+
+    if (state && parent) {
+      data.push(... this.getTitle(state, state.firstChild(parent)));
+    }
+    return data;
   }
 }

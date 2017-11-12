@@ -36,14 +36,12 @@ export class HeadersliderComponent implements OnInit {
   }
 
   stopRoutine() {
-    console.log('a');
     if (this.interval) {
       clearInterval(this.interval);
     }
   }
 
   startRoutine() {
-    console.log('b');
     this.slideRoutine();
   }
 

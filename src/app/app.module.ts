@@ -53,7 +53,7 @@ export const ROUTES: Routes = [
     path: 'aktualnosci/:id',
     component: SinglenewsComponent,
     data: {
-      title: 'FoodBox - Aktualności'
+      title: 'FoodBox - Aktualność'
     }
   }, {
     path: 'aktualnosci',
@@ -64,7 +64,10 @@ export const ROUTES: Routes = [
   }, {
     path: '',
     component: HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: 'FoodBox - Strona główna'
+    }
   }
 ];
 
